@@ -1,0 +1,4 @@
+{
+"type": "string",
+"enum": ["ISO 8601", "24-hour format", "12-hour format", "DDMMYY", "DDMMYYYY"]
+}

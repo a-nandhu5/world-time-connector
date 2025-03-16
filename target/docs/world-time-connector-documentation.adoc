@@ -1,0 +1,145 @@
+
+
+= world-time-connector Module Connector Reference
+
+
+This module relies in runtime provided components
+
+
+
+== Configurations
+
+== Operations
+
+[[IndiaTime]]
+== India Time
+`<world-time-connector:india-time>`
+
+
+Accepts time format for India and returns output
+
+
+=== Parameters
+
+[%header%autowidth.spread]
+|===
+| Name | Type | Description | Default Value | Required
+| Time Format a| Enumeration, one of:
+
+** DDMMYYYY
+** 24-hour format
+** DDMMYY
+** ISO 8601
+** 12-hour format |  Select the appropriate time format |  DDMMYYYY | {nbsp}
+| transactionId a| String |  Enter the transaction id |  | {nbsp}
+| Target Variable a| String |  The name of a variable on which the operation's output will be placed |  | {nbsp}
+| Target Value a| String |  An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable |  #[payload] | {nbsp}
+| Error Mappings a| Array of <<ErrorMapping>> |  Set of error mappings |  | {nbsp}
+|===
+
+=== Output
+
+[%autowidth.spread]
+|===
+| *Type* a| String
+|===
+
+
+
+
+[[ServerTime]]
+== Server Time
+`<world-time-connector:server-time>`
+
+
+Accepts time format for Server and returns output
+
+
+=== Parameters
+
+[%header%autowidth.spread]
+|===
+| Name | Type | Description | Default Value | Required
+| Time Format a| Enumeration, one of:
+
+** DDMMYYYY
+** 24-hour format
+** DDMMYY
+** ISO 8601
+** 12-hour format |  Select the appropriate time format |  DDMMYYYY | {nbsp}
+| transactionId a| String |  Enter the transaction id |  | {nbsp}
+| Target Variable a| String |  The name of a variable on which the operation's output will be placed |  | {nbsp}
+| Target Value a| String |  An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable |  #[payload] | {nbsp}
+| Error Mappings a| Array of <<ErrorMapping>> |  Set of error mappings |  | {nbsp}
+|===
+
+=== Output
+
+[%autowidth.spread]
+|===
+| *Type* a| String
+|===
+
+
+
+
+[[UsTime]]
+== US Time
+`<world-time-connector:us-time>`
+
+
+Accepts time format fpr US and returns output
+
+
+=== Parameters
+
+[%header%autowidth.spread]
+|===
+| Name | Type | Description | Default Value | Required
+| Time Format a| Enumeration, one of:
+
+** DDMMYYYY
+** 24-hour format
+** DDMMYY
+** ISO 8601
+** 12-hour format |  Select the appropriate time format |  DDMMYYYY | {nbsp}
+| transactionId a| String |  Enter the transaction id |  | {nbsp}
+| Target Variable a| String |  The name of a variable on which the operation's output will be placed |  | {nbsp}
+| Target Value a| String |  An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable |  #[payload] | {nbsp}
+| Error Mappings a| Array of <<ErrorMapping>> |  Set of error mappings |  | {nbsp}
+|===
+
+=== Output
+
+[%autowidth.spread]
+|===
+| *Type* a| String
+|===
+
+
+
+
+
+== Types
+[[ErrorMapping]]
+=== Error Mapping
+
+[cols=".^20%,.^25%,.^30%,.^15%,.^10%", options="header"]
+|======================
+| Field | Type | Description | Default Value | Required
+| Source a| Enumeration, one of:
+
+** ANY
+** REDELIVERY_EXHAUSTED
+** TRANSFORMATION
+** EXPRESSION
+** SECURITY
+** CLIENT_SECURITY
+** SERVER_SECURITY
+** ROUTING
+** CONNECTIVITY
+** RETRY_EXHAUSTED
+** TIMEOUT |  |  | 
+| Target a| String |  |  | x
+|======================
+

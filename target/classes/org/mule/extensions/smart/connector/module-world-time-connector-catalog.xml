@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogs xmlns="http://www.mulesoft.org/schema/mule/types" >
+
+    <catalog name="time-format" format="application/json">
+        <schema format="application/json+schema" location="./time-format-schema.json" />
+    </catalog>
+
+</catalogs>
